@@ -1,8 +1,8 @@
-public class Parkir {
+public class Biaya {
   private Kendaraan kendaraan;
   private int jamParkir;
 
-  public Parkir (Kendaraan kendaraan, int jamParkir) {
+  public Biaya (Kendaraan kendaraan, int jamParkir) {
     this.kendaraan = kendaraan;
     this.jamParkir = jamParkir;
   }
