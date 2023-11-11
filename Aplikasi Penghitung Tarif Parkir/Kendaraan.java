@@ -9,4 +9,8 @@ public class Kendaraan {
     public String getNomorPlat() {
         return nomorPlat;
     }
+    
+    public String getJenis() {
+        return this.getClass().getSimpleName();
+    }
 }
