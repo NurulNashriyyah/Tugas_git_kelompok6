@@ -8,8 +8,8 @@ public class MainParkir {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("╔══════════════════════════════════╗");
-        System.out.println("║  PARKIR KENDARAAN FAKULTAS MIPA  ║");
-        System.out.println("║     UNIVERSITAS SYIAH KUALA      ║");
+        System.out.println("║     PARKIR KENDARAAN FAKULTAS MIPA     ║");
+        System.out.println("║        UNIVERSITAS SYIAH KUALA         ║");
         System.out.println("╚══════════════════════════════════╝");
 
         System.out.print("Masukkan nomor plat kendaraan: ");
@@ -48,27 +48,24 @@ public class MainParkir {
         LocalTime waktuKeluar = LocalTime.parse(waktuKeluarStr);
         LocalTime waktuMasukKembali = parkir.keluar(kendaraan, waktuKeluar);
 
-        
-        
-        
-        
         if (waktuMasukKembali != null) {
             int biaya = new Biaya(kendaraan, waktuMasukKembali, waktuKeluar).hitungBiaya();
-            System.out.println("╔══════════════════════════════════╗");
-            System.out.println("║          STRUK PARKIR            ║");
-            System.out.println("╚══════════════════════════════════╝");
-            System.out.println("Nomor Plat: " + kendaraan.getNomorPlat());
-            System.out.println("Jenis Kendaraan: " + kendaraan.getJenis());
-            System.out.println("Waktu Masuk: " + waktuMasukKembali);
-            System.out.println("Waktu Keluar: " + waktuKeluar);
-            System.out.println("Biaya Parkir: Rp " + biaya);
+           System.out.println("\n");
+            System.out.println("╔═════════════════════════════════╗");
+            System.out.println("║              STRUK PARKIR             ║");
+            System.out.println("╚═════════════════════════════════╝");
+            System.out.println("║ Nomor Plat\t\t: " + kendaraan.getNomorPlat() + "\t║");
+            System.out.println("║ Jenis Kendaraan\t: " + kendaraan.getJenis() + "\t\t║");
+            System.out.println("║ Waktu Masuk\t\t: " + waktuMasukKembali + "\t\t║");
+            System.out.println("║ Waktu Keluar\t\t: " + waktuKeluar + "\t\t║");
+            System.out.println("║ Biaya Parkir\t\t: Rp " + biaya + "\t║");
         } else {
             System.out.println("Kendaraan tidak ditemukan dalam daftar parkir.");
         }
 
-        System.out.println("╔══════════════════════════════════╗");
-        System.out.println("║ TERIMA KASIH ATAS KUNJUNGAN ANDA ║");
-        System.out.println("╚══════════════════════════════════╝");
+        System.out.println("║-------------------------------------\t║");
+        System.out.println("║   TERIMA KASIH ATAS KUNJUNGAN ANDA  \t║");
+        System.out.println("╚═════════════════════════════════╝");
 
         scanner.close();
     }
