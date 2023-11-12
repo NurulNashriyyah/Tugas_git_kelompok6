@@ -5,21 +5,27 @@ public class Biaya {
   private Kendaraan kendaraan;
   private long jamParkir;
 
-  public Biaya (Kendaraan kendaraan, LocalTime waktuMasuk, LocalTime waktuKeluar) {
+  public Biaya(Kendaraan kendaraan, LocalTime waktuMasuk, LocalTime waktuKeluar) {
         this.kendaraan = kendaraan;
         Duration durasi = Duration.between(waktuMasuk, waktuKeluar);
-        this.jamParkir = durasi.toHours(); // Menghitung durasi parkir dalam jam
-  }
-  public int hitungBiaya() {
-    String jenis = kendaraan.getJenis();
+        this.jamParkir = durasi.toMinutes(); // Menghitung durasi parkir dalam menit
+    }
+
+    public int hitungBiaya() {
+        String jenis = kendaraan.getJenis();
+        int biayaPerJam;
+
         if (jenis.equals("Mobil")) {
-            return (int)(jamParkir + 1) * 3000;  // Biaya parkir mobil per jam
+            biayaPerJam = 3000;  // Biaya parkir mobil per jam
         } else if (jenis.equals("Motor")) {
-            return (int)(jamParkir + 1) * 2000;  // Biaya parkir motor per jam
+            biayaPerJam = 2000;  // Biaya parkir motor per jam
         } else if (jenis.equals("Bus")) {
-            return (int)(jamParkir + 1) * 5000;  // Biaya parkir bus per jam
+            biayaPerJam = 5000;  // Biaya parkir bus per jam
         } else {
-            return 0;
-        }
-  }
+            return 0; // Kendaraan tidak valid
+        }
+
+        int biayaTotal = (int) Math.ceil((double) jamParkir / 60) * biayaPerJam; // Biaya dibulatkan ke atas per jam
+        return biayaTotal;
+    }
 }
