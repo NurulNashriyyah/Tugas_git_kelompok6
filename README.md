@@ -1,4 +1,4 @@
-# Tugas_git_kelompok6
+Tugas_git_kelompok6
 Anggota : 
 
 Nurul Uzratun Nashriyyah ( 2208107010030 )
@@ -14,3 +14,5 @@ KASUS:
 Topik : Aplikasi Penghitung Tarif Parkir
 
 Fenomena : Seorang customer ingin memarkirkan kendaraannya dengan tarif sesuai dengan jenis kendaraan dan lama waktu pemarkiran.
+
+![image](https://github.com/NurulNashriyyah/Tugas_git_kelompok6/assets/132476166/76bbb731-ff8e-4af0-a914-81fc1155feac)
