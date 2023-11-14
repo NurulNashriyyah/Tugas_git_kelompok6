@@ -1,5 +1,5 @@
 // Kelas Kendaraan (Superclass)
-public class Kendaraan {
+public abstract class Kendaraan {
     private String nomorPlat;
 
     public Kendaraan(String nomorPlat) {
@@ -10,7 +10,5 @@ public class Kendaraan {
         return nomorPlat;
     }
     
-    public String getJenis() {
-        return this.getClass().getSimpleName();
-    }
+    public abstract String getJenis();
 }
