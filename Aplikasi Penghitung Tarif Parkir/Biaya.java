@@ -26,12 +26,12 @@ public class Biaya {
         int biayaPerJam = 0; // Biaya parkir per jam
         int menitPerJam = 60; // Menit dalam satu jam
 
-        if (jenis.equals("Mobil")) {
-            biayaPerJam = 3000; // Biaya parkir mobil per jam
-        } else if (jenis.equals("Motor")) {
-            biayaPerJam = 2000; // Biaya parkir motor per jam
-        } else if (jenis.equals("Bus")) {
-            biayaPerJam = 5000; // Biaya parkir bus per jam
+        if (kendaraan.getJenis.equals("Mobil")) {
+            biayaPerJam = 3000;
+        } else if (kendaraan.getJenis.equals("Motor")) {
+            biayaPerJam = 2000;
+        } else if (kendaraan.getJenis.equals("Bus")) {
+            biayaPerJam = 5000;
         } else {
             return 0;
         }
